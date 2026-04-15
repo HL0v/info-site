@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Terminal } from 'lucide-react';
-
+import { contact } from '../const/contact';
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
@@ -27,7 +27,7 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="signature-gradient text-white px-8 py-4 rounded-xl text-md font-bold tracking-tight hover:shadow-xl transition-all active:scale-95">
+            <button className="signature-gradient text-white px-8 py-4 rounded-xl text-md font-bold tracking-tight hover:shadow-xl transition-all active:scale-95" onClick={contact}>
               Solicitar Orçamento
             </button>
             <button className="bg-slate-200 text-brand-blue px-8 py-4 rounded-xl text-md font-bold tracking-tight hover:bg-slate-300 transition-all active:scale-95">

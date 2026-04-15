@@ -41,7 +41,7 @@ export default function Services() {
               Não apenas construímos sites; compilamos experiências que escalam com a lógica do seu negócio.
             </p>
           </div>
-          <div className="hidden md:block h-px flex-grow mx-12 bg-slate-200 mb-4"></div>
+          <div className="hidden md:block h-px grow mx-12 bg-slate-200 mb-4"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
