@@ -15,6 +15,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
+    {name: 'Home', href: '#'},
     { name: 'Serviços', href: '#servicos' },
     { name: 'Sobre', href: '#sobre' },
     { name: 'Contato', href: '#contato' },
@@ -28,7 +29,9 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
         <div className="text-2xl font-headline font-bold tracking-tighter text-brand-blue">
-          InfoJr
+          <a href='#'>
+            <img src='/src/public/info.svg'></img>
+          </a>
         </div>
 
         {/* Desktop Nav */}
