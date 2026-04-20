@@ -1,5 +1,9 @@
+
+
 export const contact = () => {
-  return (
-    window.open('https://wa.me/5519995943486')
+  const numero = import.meta.env.VITE_CONTACTINFO
+  return (    
+    
+    window.open(`https://wa.me/${numero}`)
   );
 }
