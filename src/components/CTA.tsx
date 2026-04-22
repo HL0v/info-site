@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Rocket } from 'lucide-react';
+import { contact } from '../const/contact';
 
 export default function CTA() {
   return (
@@ -10,7 +11,7 @@ export default function CTA() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="md:col-span-8 signature-gradient rounded-3xl p-8 md:p-12 text-white flex flex-col justify-between min-h-[400px] shadow-xl"
+            className="md:col-span-8 signature-gradient rounded-3xl p-8 md:p-12 text-white flex flex-col justify-between min-h-400 shadow-xl"
           >
             <div>
               <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter mb-6">
@@ -21,7 +22,7 @@ export default function CTA() {
               </p>
             </div>
             <div>
-              <button className="bg-brand-green text-brand-blue-light px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:gap-5 transition-all group active:scale-95">
+              <button className="bg-brand-green text-brand-blue-light px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:gap-5 transition-all group active:scale-95" onClick={contact}>
                 Começar seu Projeto
                 <ArrowRight size={20} />
               </button>
