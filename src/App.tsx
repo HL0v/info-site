@@ -1,24 +1,21 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Services from './components/Services'
-import About from './components/About'
-import CTA from './components/CTA'
-import Footer from './components/Footer'
+
+import { BrowserRouter } from 'react-router-dom'
+import Layout from './components/layout/Layout'
+import { MainRoutes } from './routes'
 
 function App() {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="grow">
-          <Hero />
-          <Services />
-          <About />
-          <CTA />
-        </main>
-        <Footer />
+      <BrowserRouter>
+        <div className="min-h-screen flex flex-col">
+          <Layout>
+          <main className="grow">
+            <MainRoutes/>
+          </main>
+          </Layout>
         </div>
+      </BrowserRouter>
     </>
   )
 }

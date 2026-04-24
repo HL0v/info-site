@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 
 .env
+src/components/Portifolio/PortifolioComponents/ui/Assets/sites-img

@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Rocket } from 'lucide-react';
-import { contact } from '../const/contact';
+import { contact } from '../../consts/contact/contact';
+
 
 export default function CTA() {
   return (
@@ -11,7 +12,7 @@ export default function CTA() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="md:col-span-8 signature-gradient rounded-3xl p-8 md:p-12 text-white flex flex-col justify-between min-h-400 shadow-xl"
+            className="md:col-span-8 signature-gradient rounded-3xl p-8 md:p-12 text-white flex flex-col justify-between min-h-400px shadow-xl"
           >
             <div>
               <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter mb-6">
@@ -39,8 +40,8 @@ export default function CTA() {
             <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-sm mb-6">
               <Rocket className="text-brand-blue" size={40} />
             </div>
-            <h3 className="font-headline text-2xl font-bold text-brand-blue mb-2">Via Rápida</h3>
-            <p className="text-slate-500 text-sm">Lance seu MVP em semanas, não meses.</p>
+            <h3 className="font-headline text-2xl font-bold text-brand-blue mb-2">Decole no Digital</h3>
+            <p className="text-slate-500 text-sm">Contrate agora nossas soluções.</p>
           </motion.div>
         </div>
       </div>

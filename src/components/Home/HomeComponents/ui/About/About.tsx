@@ -18,7 +18,7 @@ export default function About() {
                 Nascida na UNESP Rio Claro, <br/>Movida pela Inovação.
               </h2>
               <p className="text-slate-600 text-lg leading-relaxed">
-                A InfoJr é mais do que uma software house. Somos uma incubadora de talentos dentro do ecossistema da UNESP Rio Claro. Combinando o rigor da pesquisa acadêmica com a agilidade do mercado tecnológico, entregamos soluções tecnicamente sólidas e praticamente invencíveis.
+                A InfoJr é mais do que uma empresa junior. Somos uma incubadora de talentos dentro do ecossistema da UNESP Rio Claro. Combinando o rigor da pesquisa acadêmica com a agilidade do mercado tecnológico, entregamos soluções tecnicamente sólidas e praticamente invencíveis.
               </p>
               
               <div className="grid grid-cols-2 gap-8 pt-4">

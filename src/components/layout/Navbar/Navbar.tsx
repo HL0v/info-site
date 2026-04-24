@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { Menu, X } from "lucide-react";
+import { FaSquareInstagram, FaSquareWhatsapp } from "react-icons/fa6";
+import { contact } from "../../Home/HomeComponents/consts/contact/contact";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,26 +12,29 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    {name:'Home', href:'#'},
-    { name: 'Serviços', href: '#servicos' },
-    { name: 'Sobre', href: '#sobre' },
-    { name: 'Contato', href: '#contato' },
+    { name: "Home", href: "/" },
+    { name: "Serviços", href: "/#servicos" },
+    { name: "Sobre", href: "/#sobre" },
+    { name: "Contato", href: "/#contato" },
+    { name: "Portifólio", href: "/portifolio" },
   ];
 
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-xl shadow-sm py-4' : 'bg-transparent py-6'
+        isScrolled
+          ? "bg-white/80 backdrop-blur-xl shadow-sm py-4"
+          : "bg-transparent py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
         <div className="text-2xl font-headline font-bold tracking-tighter text-brand-blue">
-          <a href='#'>InfoJr</a>
+          <a href="#">InfoJr</a>
         </div>
 
         {/* Desktop Nav */}
@@ -44,11 +49,15 @@ export default function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-blue transition-all group-hover:w-full"></span>
             </a>
           ))}
-          <button className="signature-gradient text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-tight hover:opacity-90 transition-opacity active:scale-95">
-            Começar
-          </button>
+          
+          <div className="columns-2">
+            <h2 className="text-2xl font-bold text-brand-blue"><FaSquareWhatsapp onClick={contact} /></h2>
+            <h2 className="text-2xl font-bold text-brand-blue"><FaSquareInstagram onClick={() => {
+              window.open('https://instagram.com/infojr')
+            }}/></h2>
+          </div>
         </div>
-
+        
         {/* Mobile Toggle */}
         <button
           className="md:hidden text-brand-blue"
@@ -78,9 +87,6 @@ export default function Navbar() {
                   {link.name}
                 </a>
               ))}
-              <button className="signature-gradient text-white px-6 py-3 rounded-lg text-md font-bold tracking-tight w-full">
-                Começar
-              </button>
             </div>
           </motion.div>
         )}
