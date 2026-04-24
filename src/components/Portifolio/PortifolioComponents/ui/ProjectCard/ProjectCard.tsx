@@ -4,7 +4,7 @@ import {type Project } from '../../Data/projects';
 export function ProjectCard({ project }: { project: Project }){
   const coverSrc = project.cover;
   return (
-    <Link className="group relative block overflow-hidden bg-(--brand-deep)" to={`/portifolio/${project.slug}`}>
+    <Link className="group relative block overflow-hidden bg-(--brand-deep) shadow-2xl" to={`/portifolio/${project.slug}`}>
       <div className="aspect-video w-full overflow-hidden">
         <img
           src={coverSrc}

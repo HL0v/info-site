@@ -15,7 +15,7 @@ export default function About() {
             <div className="relative z-10 space-y-8">
               <span className="text-sm font-bold text-brand-green-dark uppercase tracking-[0.2em]">O Espírito da Empresa Júnior</span>
               <h2 className="font-headline text-4xl md:text-5xl font-bold text-brand-blue tracking-tighter leading-tight">
-                Nascida na UNESP Rio Claro, <br/>Movida pela Inovação.
+                Nascida na UNESP<br/>Rio Claro, <br/>Movida pela Inovação.
               </h2>
               <p className="text-slate-600 text-lg leading-relaxed">
                 A InfoJr é mais do que uma empresa junior. Somos uma incubadora de talentos dentro do ecossistema da UNESP Rio Claro. Combinando o rigor da pesquisa acadêmica com a agilidade do mercado tecnológico, entregamos soluções tecnicamente sólidas e praticamente invencíveis.

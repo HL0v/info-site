@@ -26,10 +26,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 bg-slate-200 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-xl shadow-sm py-4"
-          : "bg-transparent py-6"
+          ? "bg-slate-200 backdrop-blur-xl shadow-sm py-4"
+          : "bg-slate-50 py-3"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
