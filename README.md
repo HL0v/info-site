@@ -21,7 +21,7 @@ A navegação do site está estruturada da seguinte forma:
 * `/portifolio`: Página que lista todos os projetos ou trabalhos do portfólio.
 * `/portifolio/:slug`: Página de detalhes individuais para exibir informações aprofundadas sobre um projeto ou item específico.
 
----
+
 
 ## Como rodar o projeto localmente
 
@@ -35,3 +35,5 @@ A navegação do site está estruturada da seguinte forma:
    ```bash
    git clone <url-do-repositorio>
    cd info-site
+
+_ass:_ _hl0v_
