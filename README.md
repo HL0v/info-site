@@ -1,75 +1,37 @@
-# React + TypeScript + Vite
+# Info Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição do Projeto
+O **Info Site** é uma aplicação web front-end moderna construída para servir como um site institucional e portfólio. A aplicação possui uma página inicial para apresentar os serviços, informações sobre a empresa/equipa, secções de chamada para ação (CTA), e uma área dedicada a exibir os projetos desenvolvidos, incluindo páginas de detalhes para cada item do portfólio.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
+Este projeto utiliza um ecossistema focado em alta performance de desenvolvimento, tipagem segura e estilização rápida:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **[React 19](https://react.dev/)**: Biblioteca para a construção da interface do utilizador.
+* **[TypeScript](https://www.typescriptlang.org/)**: Adiciona tipagem estática ao JavaScript, promovendo mais segurança e previsibilidade no código.
+* **[Vite 6](https://vitejs.dev/)**: Ferramenta de build e servidor de desenvolvimento extremamente rápido, configurado para suportar o React Compiler.
+* **[Tailwind CSS v4](https://tailwindcss.com/)**: Framework CSS utilitário para a estilização dos componentes.
+* **[React Router DOM v7](https://reactrouter.com/)**: Roteamento da aplicação Single Page Application (SPA).
+* **[Framer Motion](https://motion.dev/)**: Biblioteca para a criação de animações fluidas nas interfaces.
+* **[Vitest](https://vitest.dev/)**: Framework de testes configurado para validação do código.
+* **Ícones**: Utilização das bibliotecas `lucide-react` e `react-icons`.
 
-## React Compiler
+## Estrutura de Rotas
+A navegação do site está estruturada da seguinte forma:
+* `/`: Página inicial (`Home`), que exibe os componentes de *Hero*, *Services*, *About* e *CTA*.
+* `/portifolio`: Página que lista todos os projetos ou trabalhos do portfólio.
+* `/portifolio/:slug`: Página de detalhes individuais para exibir informações aprofundadas sobre um projeto ou item específico.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## Como rodar o projeto localmente
 
-## Expanding the ESLint configuration
+### Pré-requisitos
+* **Node.js**: Certifique-se de ter o Node instalado na sua máquina (recomenda-se a versão LTS mais recente, 18+ ou 20+).
+* Gestor de pacotes da sua preferência (`npm`, `yarn`, `pnpm` ou `bun`).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Instruções de Instalação e Execução
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clone o repositório** (caso utilize controlo de versão remoto):
+   ```bash
+   git clone <url-do-repositorio>
+   cd info-site
